@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Путешествия по России</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">О проекте</a>
+        <a href="directions.html">Направления</a>
+        <a href="galerey.html">Галерея</a>
+        <a href="directions.html">Планирование</a>
+        <a href="contact.html">Контакты</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="block_proekt">
+    <h2>О проекте</h2>
+    <p>Добро пожаловать на сайт "Путешествия по России"! Здесь вы найдёте информацию о самых интересных местах нашей страны.</p>
+    <p>Россия - самая большая страна в мире, и на ее территории расположено множество уникальных природных и культурных достопримечательностей.</p>
+</section>
+
+<section class="block_info">
+    <h2>Популярные направления</h2>
+
+    <h3>Топ-5 направлений для путешествий по России:</h3>
+    <ol>
+        <li>Озеро Байкал</li>
+        <li>Камчатка</li>
+        <li>Золотое кольцо России</li>
+        <li>Алтай</li>
+        <li>Калининградская область</li>
+    </ol>
+
+    <h3>Сравнение направлений</h3>
+
+    <table>
+        <tr>
+            <th>Направление</th>
+            <th>Лучшее время для посещения</th>
+            <th>Средняя стоимость поездки</th>
+        </tr>
+        <tr>
+            <td>Озеро Байкал</td>
+            <td>Июль-август</td>
+            <td>30 000 руб.</td>
+        </tr>
+        <tr>
+            <td>Камчатка</td>
+            <td>Июль-сентябрь</td>
+            <td>70 000 руб.</td>
+        </tr>
+        <tr>
+            <td>Золотое кольцо</td>
+            <td>Май-сентябрь</td>
+            <td>20 000 руб.</td>
+        </tr>
+        <tr>
+            <td>Алтай</td>
+            <td>Июнь-август</td>
+            <td>25 000 руб.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="block_images">
+    <h2>Галерея</h2>
+
+    <h3>Озеро Байкал</h3>
+    <img src="images/baikal.jpg" alt="Озеро Байкал" class="gallery-img">
+
+    <p>Алтай – горный край с уникальной природой</p>
+
+    <ul>
+        <img src="images/baikal.jpg" alt="" height="300" width="300">
+        <li><a href="#">Фото Байкала</a></li>
+        <img src="images/kamchatka.jpg" alt="" height="300" width="300">
+        <li><a href="#">Фото Камчатки</a></li>
+        <img src="images/altay.jpg" alt="" height="300" width="300">
+        <li><a href="#">Фото Алтая</a></li>
+    </ul>
+</section>
+
+<section class="block_personal">
+    <h2>Планирование путешествия</h2>
+
+    <form>
+        <label>Ваше имя:</label>
+        <input type="text">
+
+        <label>Email:</label>
+        <input type="email">
+
+        <label>Выберите направление:</label>
+        <select>
+            <option>--Выберите направление--</option>
+            <option>Байкал</option>
+            <option>Камчатка</option>
+            <option>Алтай</option>
+        </select>
+
+        <div class="travel-type">
+            <label>Тип путешествия:</label><br>
+            <label><input type="radio" name="type"> Индивидуальное</label><br>
+            <label><input type="radio" name="type"> Групповое</label>
+        </div>
+
+        <div class="add-services">
+            <label>Дополнительные услуги:</label><br>
+            <label><input type="checkbox"> Гид</label><br>
+            <label><input type="checkbox"> Трансфер</label><br>
+            <label><input type="checkbox"> Страховка</label>
+        </div>
+
+        <label>Комментарии и пожелания:</label>
+        <textarea></textarea>
+
+        <div class="buttons">
+            <button type="submit">Отправить заявку</button>
+            <button type="reset">Очистить форму</button>
+        </div>
+    </form>
+</section>
+
+<section class="block_contact">
+    <h2>Контакты</h2>
+    <p>Свяжитесь с нами для получения дополнительной информации:</p>
+    <p>Телефон: <a href="#">+7 (999) 123-45-67</a></p>
+    <p>Email: info@travel-russia.ru</p>
+    <p>Адрес: Москва, ул. Путешественников, д. 10</p>
+</section>
+
+</main>
+
+<footer>
+    © 2025 Путешествия по России. Все права защищены.
+</footer>
+
+</body>
+</html>
