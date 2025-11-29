@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Галерея Grid</title>
+<link rel="stylesheet" href="task3.css">
+</head>
+<body>
+
+<h1>Галерея изображений c использованием Grid</h1>
+<a href="index.html" class="button">Нажать на изображения с использованием FlexBox</a>
+<div class="gallery" id="gallery"></div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close" onclick="closeLightbox()">×</span>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+const gallery = document.getElementById('gallery');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+// Создание 12 случайных изображений
+for (let i = 0; i < 12; i++) {
+  const img = document.createElement('img');
+  img.src = `https://picsum.photos/400/300?random=${Math.floor(Math.random() * 1000)}`;
+  img.alt = `Фото ${i+1}`;
+  img.addEventListener('click', () => {
+    lightboxImg.src = img.src;
+    lightbox.classList.add('open');
+  });
+  gallery.appendChild(img);
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('open');
+}
+
+lightbox.addEventListener('click', e => {
+  if (e.target === lightbox) closeLightbox();
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeLightbox();
+});
+</script>
+
+</body>
+</html>
