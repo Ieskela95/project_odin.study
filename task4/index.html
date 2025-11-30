@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Вкусная еда</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light text-dark">
+
+<!-- ---------- HEADER ---------- -->
+<header class="bg-gradient-header p-3 position-sticky top-0 z-3">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div class="theme-toggle text-white" onclick="toggleTheme()">🌓</div>
+    
+    <!-- Навигация для ПК -->
+    <nav class="d-none d-md-flex gap-4">
+      <a href="index.html" class="text-white text-decoration-none fw-bold">Главная</a>
+      <a href="recipe.html" class="text-white text-decoration-none fw-bold">Рецепты</a>
+      <a href="#" class="text-white text-decoration-none fw-bold">О нас</a>
+      <a href="#" class="text-white text-decoration-none fw-bold">Контакты</a>
+    </nav>
+
+    <!-- Offcanvas меню для мобильных -->
+    <button class="btn btn-outline-light d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+      ☰
+    </button>
+  </div>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Меню</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column gap-3">
+      <a href="index.html" class="text-decoration-none">Главная</a>
+      <a href="#" class="text-decoration-none">Рецепты</a>
+      <a href="#" class="text-decoration-none">О нас</a>
+      <a href="#" class="text-decoration-none">Контакты</a>
+    </div>
+  </div>
+</header>
+
+<!-- ---------- POPULAR RECIPES ---------- -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">Популярные рецепты</h2>
+  <div class="row g-4">
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm">
+        <img src="images/salad.jpeg" class="card-img-top" alt="Салат">
+        <div class="card-body">
+          <h5 class="card-title">Свежий салат</h5>
+          <p class="card-text">Легкий и полезный салат с сезонными овощами и домашней заправкой.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm">
+        <img src="images/pasta.jpg" class="card-img-top" alt="Паста">
+        <div class="card-body">
+          <h5 class="card-title">Итальянская паста</h5>
+          <p class="card-text">Паста с томатным соусом и свежими травами.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm">
+        <img src="images/dessert.jpg" class="card-img-top" alt="Десерт">
+        <div class="card-body">
+          <h5 class="card-title">Фруктовый десерт</h5>
+          <p class="card-text">Нежный десерт из свежих фруктов и легких сливок.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ---------- ABOUT ---------- -->
+<div class="container my-5">
+  <div class="row g-4 align-items-center">
+    <div class="col-md-6">
+      <div class="p-4 bg-white shadow rounded">
+        <h3 class="text-danger mb-3">О нашей философии питания</h3>
+        <p>Мы верим, что еда должна быть не только вкусной, но и полезной. Наши рецепты создаются с любовью к натуральным продуктам и заботой о вашем здоровье.</p>
+        <p>Каждое блюдо — это гармония вкусов, текстур и ароматов, которые подарят вам настоящее гастрономическое удовольствие.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img src="images/The_chef.jpg" alt="Шеф-повар" class="img-fluid rounded shadow">
+    </div>
+  </div>
+</div>
+
+<!-- ---------- WHY US ---------- -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">Почему выбирают нас</h2>
+  <div class="row g-4">
+    <div class="col-12 col-md-4">
+      <div class="p-4 bg-white text-center shadow rounded">
+        <h5>🥑 Свежие продукты</h5>
+        Только сезонные и качественные ингредиенты
+      </div>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="p-4 bg-white text-center shadow rounded">
+        <h5>⏱ Быстрое приготовление</h5>
+        Рецепты, которые готовятся за 30 минут
+      </div>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="p-4 bg-white text-center shadow rounded">
+        <h5>❤️ Полезно для здоровья</h5>
+        Сбалансированное питание для всей семьи
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ---------- FOOTER ---------- -->
+<footer class="bg-dark text-white text-center p-4">
+  © 2024 Вкусная еда. Все права защищены.<br>
+  Свяжитесь с нами: info@vkusnaya-eda.ru
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle('dark');
+  }
+</script>
+</body>
+</html>
