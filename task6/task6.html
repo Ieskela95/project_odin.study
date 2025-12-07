@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Задание 6 — Слайдер</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    .slider-container {
+      width: 700px;
+      height: 450px;
+      position: relative;
+      overflow: hidden;
+      background: #000;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .slides {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slides img {
+      width: 700px;
+      height: 450px;
+      object-fit: cover;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.7);
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 20px;
+      border-radius: 6px;
+    }
+
+    #next {
+      right: 10px;
+    }
+
+    #prev {
+      left: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slider-container">
+    <div class="slides" id="slides">
+      <img src="https://picsum.photos/id/1018/700/450" alt="slide1">
+      <img src="https://picsum.photos/id/1015/700/450" alt="slide2">
+      <img src="https://picsum.photos/id/1016/700/450" alt="slide3">
+    </div>
+
+    <button class="arrow" id="prev">←</button>
+    <button class="arrow" id="next">→</button>
+  </div>
+
+<script>
+  const slides = document.getElementById('slides');
+  const images = slides.querySelectorAll('img');
+  let index = 0;
+
+  document.getElementById('next').onclick = function () {
+    index = (index + 1) % images.length;
+    slides.style.transform = `translateX(${-700 * index}px)`;
+  };
+
+  document.getElementById('prev').onclick = function () {
+    index = (index - 1 + images.length) % images.length;
+    slides.style.transform = `translateX(${-700 * index}px)`;
+  };
+</script>
+
+</body>
+</html>
